@@ -67,13 +67,13 @@ print(f"Greatest Increase in Profits: {month_increase} (${profit_increase})")
 print(f"Greatest Decrease in Profits: {month_decrease} (${profit_decrease})")
 
 with open('output.txt', 'w+') as file:
-    #Triple quotes to enclose multiple lines in print statement is possible; specifics for variables needed to use correctly
+    #export results to text file
     file.write("Financial Analysis\n")
     file.write("----------------------------\n")
     file.write("Total Months: " + str(len(month))+ '\n')
-    file.write("Total Revenue: $" + str(total_revenue)+ '\n')
-    file.write("Average Revenue Change: $" + str(monthly_change)+ '\n')
-    file.write("Greatest Increase in Revenue: " + str(month_increase) + " ($"+str(profit_increase)+")\n")
-    file.write("Greatest Decrease in Revenue: " + str(month_decrease) + " ($"+str(profit_decrease)+")\n")
+    file.write("Total: $" + str(total_revenue)+ '\n')
+    file.write("Average Change: $" + str(round(monthly_change,2))+ '\n')
+    file.write("Greatest Increase in Profits: " + str(month_increase) + " ($"+str(profit_increase)+")\n")
+    file.write("Greatest Decrease in Profits: " + str(month_decrease) + " ($"+str(profit_decrease)+")\n")
     file.write("----------------------------\n")
     file.close()
